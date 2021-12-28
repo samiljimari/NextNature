@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <title>Next Nature</title>
+        <link rel="icon" type="image/x-icon" href="images/cyber.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="navbar">
+                    <div class="nav-logo">
+
+                        <svg viewBox="100 100 100 100" class="svglogo">
+                            <defs>
+                              <filter id="red-glow" filterUnits="userSpaceOnUse"
+                                      x="-50%" y="-50%" width="150%" height="150%">
+                                 <!-- blur levels-->
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur5"/>
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur10"/>
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur15"/>
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur20"/>
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="25" result="blur25"/>
+                                <!-- merge all except last -->
+                                <feMerge result="blur-merged">
+                                  <feMergeNode in="blur5"/>
+                                  <feMergeNode in="blur10"/>
+                                  <feMergeNode in="blur15"/>
+                                  <feMergeNode in="blur20"/>
+                                </feMerge>
+                                <!-- set color as red-->
+                                <feColorMatrix result="red-blur" in="blur-merged" type="matrix"
+                                               values="1 0 0 0 0
+                                                       0 0.06 0 0 0
+                                                       0 0 0.44 0 0
+                                                       0 0 0 1 0" />
+                                <feMerge>
+                                  <feMergeNode in="red-blur"/>       <!-- red blur -->
+                                  <feMergeNode in="blur5"/>          <!-- white blur -->
+                                  <feMergeNode in="SourceGraphic"/>  
+                                </feMerge>
+                              </filter>
+                            </defs>
+                
+                          </svg>
+
+                        <a href="home.php">
+                            <img src="images/logo.svg" height="60" width="60" alt="cyber electronics logo" class="cyberLogo">
+                        </a>
+                    </div>
+
+                    <ul class="nav-ul" id="nav-ul-res">  
+                        <li onclick = "window.location = '/php_website/index.php';">
+                            <a>The Project</a>
+                        </li>
+                        <li onclick="window.location = '/php_website/categories/categories.php';" class="dropCategories">
+                            <a href="/php_website/categories/categories.php">Community</a>
+                        </li>
+                        <li onclick= "window.location = '/php_website/404/404.php';">
+                            <a>Minting</a>
+                        </li>
+                        <li onclick= "window.location = '/php_website/404/404.php';">
+                            <a>FAQ</a>
+                        </li>
+                        <li onclick= "window.location = '/php_website/404/404.php';">
+                            <a>Roadmap</a>
+                        </li>
+                        
+                    </ul>
+
+                    <div class="nav-icons">
+                        <a href="https://www.opensea.io/"> <img class="nav-logos open-sea-icon" src="images/opensea_white.png" alt=""></a>
+                        <a href="https://twitter.com/NextNatureNFT"> <img class="nav-logos" src="images/twitterlogo.png" alt=""></a>
+                        <a href="https://discord.gg/wksmQSRXWj"> <img class="nav-logos" src="images/discordlogo.png" alt=""></a>
+                    </div>                    
+
+                </div>
+            </nav>
+        <header>
+            
+        <div class="nft-header-showcase">
+            <img class="nft" src="images/rainforest2.png" alt="">
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="segment left">
+                    <p class="textbox-h">The Project</p>
+
+                    <p class="textbox">The Next Nature project and its 365 unique unique NFT's are made with a intent 
+                        to support the global help for preserving and nourishing the nature. This is being done by donating 10% of each and every 
+                        NFT purchase to a variety of organizations which help to either preserve or re-build certain eco systems which are necessary for the wellbeing of all of us.</p>
+                    <div class="line"></div>
+                </div>
+
+                <div class="segment right">
+                    <p class="textbox-h">Our partners</p>
+                    <img class="partners" src="images/partner1.svg" alt="">
+                    <img class="partners" src="images/partner2.png" alt="">
+                    <img class="partners" src="images/partner3.png" alt="">
+                    <img class="partners" src="images/partner4.png" alt="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="segment single">
+                    <p class="textbox-h">Idea behind the project</p>
+                    
+                    <p class="textbox">The Next Nature team is composed of people thriving with initiatives to help spread awareness about 
+                        the current state of ecosystems around the world, what is wrong with the current way we as a society are managing 
+                        these ecosystems and how we as individuals can help. Together with our love for crypto, developing, art and nature,
+                        we thought of creating a NFT to merge all this together and help as much as we can by providing part of the profits
+                        from the collection to organizations whose mission is to help the nature.
+                    </p>
+
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="segment left">
+                    <p class="textbox-h">Community</p>
+                    <p class="textbox">You can join us and learn more about the project and the details of release and how to get involved on our discord server. 
+                        Also make sure to follow our Twitter and Instagram accounts to stay up to date with the project.
+                    </p>
+                    <div class="line"></div>
+                </div>
+
+                <div class="segment right">
+                    <button onclick="openSea()" class="social-buttons opensea-button"> <img class="nav-logos open-sea-icon" src="images/opensea_blue.png" alt="">OpenSea</button>
+                    <button onclick="twitter()" class="social-buttons twitter-button"> <img class="nav-logos" src="images/twitterlogo.png" alt="">Twitter</button>
+                    <button onclick="discord()" class="social-buttons discord-button"> <img class="nav-logos" src="images/discordlogo.png" alt="">Discord</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="segment left">
+                    <img class="nft-mint-img" src="images/nft2.png" alt="">
+                </div>
+
+                <div class="segment right">
+                    <p class="textbox-h">Minting</p>
+                    <p class="textbox">Next Nature project will make 365 unique NFT's available to the public on release date at a cost of 0.2 Ethereum.
+                        Targeted release date as of now is 30th of January. With a pre-sale on 28th of January for whitelisted members with the capacity of 250 NFT's in the pre-sale.
+                    </p>
+                    <div class="line"></div>
+
+                    <button class="social-buttons mint-button">Mint</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <!--<script src="/php_website/mobile-menu-toggle.js"></script>-->
+        
+    </body>
+</html>
