@@ -8,8 +8,8 @@
 body, html {
     min-width: 100%;
     min-height: 100%;
-    background-color: rgb(21, 58, 46);
-    background-image: linear-gradient(90deg, rgb(21, 58, 46), rgb(21, 60, 50));
+    background-color: rgb(139,0,139);
+    background-image: linear-gradient(90deg, rgb(18, 6, 43), rgb(26, 8, 63));
     color: rgb(255, 255, 255);
     padding: 0px;
     margin: 0px auto;
@@ -108,7 +108,7 @@ nav ul li:hover
     -webkit-transition: 0.5s linear;
     transition: 0.5s linear; 
     background-color: rgba(0,0,0,.075);
-    color: #f75c6f;
+    color: #9370DB;
 }
 
 .nav-right ul li
@@ -350,12 +350,19 @@ h2
 
 .line {
     width: 70%;
-    border-top: 5px solid #f75c6f;
+    border-top: 5px solid #9370DB;
+}
+
+.line-reversed {
+    margin-left: auto;
+    margin-right: 0;
+    width: 70%;
+    border-top: 5px solid #9370DB;
 }
 
 .partners {
-    max-width: 300px;
-    max-height: 250px;
+    /*max-width: 300px;*/
+    max-height: 200px;
 }
 
 .single {
@@ -429,4 +436,167 @@ h2
 .mint-button:hover {
     background: #50ebd6;
     box-shadow: 0 0 20px #50ebd6;
+}
+
+.left-h {
+    width: 45%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.right-h {
+    width: 55%;
+}
+
+.box {
+    border-radius: 12px;
+    background: linear-gradient(225deg,rgb(104, 151, 150),rgba(37, 66, 66, 0));
+}
+
+.purple {
+    color: #9370DB;
+}
+
+.cover {
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+
+/* Roadmap */
+
+.timeline {
+    background: var(--primary-color);
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Card container */
+.card {
+    position: relative;
+    max-width: 100%;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+    padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+    padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid #9370DB;
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+    left: 0px;
+    top: -8px;
+    bottom: -8px;
+    border-width: 8px 0 8px 8px;
+    border-radius: 50px 0 0 50px;
+}
+
+/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+@media only screen and (max-width: 400px) {
+    .card:nth-child(odd)::before {
+        top: -5px;
+        bottom: -5px;
+    }
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 8px 8px 8px 0;
+    border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+    border-top: 0;
+    border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(225deg,#3d2384,rgba(28,14,47,0));
+    color: #ffff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+/* Title of the card */
+.title {
+    color: #ffff;
+    position: relative;
+}
+
+/* Timeline dot  */
+.title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 4px solid #390d92;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even) > .info > .title {
+    text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info > .title::before {
+    left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info > .title::before {
+    right: -45px;
+}
+
+.roadmap {
+    width: 100%;
+}
+
+.textbox-h-roadmap {
+    font-size: 3rem;
+    text-align: center;
+    margin: 5%;
+}
+
+.left-r {
+ width: 50%;
+}
+
+.right-r {
+ max-width: 50%;
+}
+
+.rd-2 {
+    margin-top: 20% !important;
 }
