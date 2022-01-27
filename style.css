@@ -217,6 +217,7 @@ nav ul li:hover
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: rgba(147, 112, 219, .2);
 }
 
 .animation-div
@@ -342,8 +343,8 @@ h2
 }
 
 .textbox {
-    font-size: 1.6rem;
-    line-height: 1.6;
+    font-size: 1.9rem;
+    line-height: 1.9;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -361,8 +362,9 @@ h2
 }
 
 .partners {
-    /*max-width: 300px;*/
+    max-width: 350px;
     max-height: 200px;
+    margin: 3%;
 }
 
 .single {
@@ -599,4 +601,13 @@ h2
 
 .rd-2 {
     margin-top: 20% !important;
+}
+
+.main-right {
+    margin-right: 0 !important;
+}
+
+.rd-container {
+    position: relative;
+    top: 12%;
 }
